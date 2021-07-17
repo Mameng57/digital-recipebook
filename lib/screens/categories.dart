@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import '../dummy_data.dart';
+import '../widgets/category_item.dart';
 
 class Categories extends StatelessWidget {
-  const Categories({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return GridView(
@@ -12,9 +12,9 @@ class Categories extends StatelessWidget {
         mainAxisSpacing: 20,
         crossAxisSpacing: 20,
       ),
-      children: [
-        
-      ],
+      children: DUMMY_CATEGORIES.map(
+        (element) => CategoryItem(element.title, element.color)
+      ).toList(),
     );
   }
 }
