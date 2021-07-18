@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import '../screens/meals_screen.dart';
 
 class CategoryItem extends StatelessWidget {
+  final String _id;
   final String _title;
   final Color _color;
 
   const CategoryItem(
+    this._id,
     this._title,
     this._color,
   );
@@ -14,12 +15,8 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (_) {
-              return MealsScreen();
-            }
-          )
+        Navigator.of(context).pushNamed(
+          '/meals', arguments: {'id': _id, 'title': _title},
         );
       },
       splashColor: Theme.of(context).primaryColor,

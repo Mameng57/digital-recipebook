@@ -1,3 +1,4 @@
+import 'package:digital_recipebook/screens/meals_screen.dart';
 import 'package:flutter/material.dart';
 import './screens/categories_screen.dart';
 
@@ -23,6 +24,9 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
+      routes: {
+        '/meals': (_) => MealsScreen(),
+      },
       home: CategoriesScreen(),
     );
   }
