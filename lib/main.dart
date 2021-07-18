@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import './screens/categories.dart';
+import './screens/categories_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: Categories(),
+      home: CategoriesScreen(),
     );
   }
 }
