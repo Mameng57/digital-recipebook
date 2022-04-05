@@ -24,11 +24,10 @@ class CategoryMealsScreen extends StatelessWidget {
         ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: categoryColor,
             gradient: LinearGradient(
               colors: [
                 categoryColor,
-                categoryColor.withOpacity(0.5),
+                categoryColor.withOpacity(0.2),
               ],
             ),
           ),
@@ -43,6 +42,7 @@ class CategoryMealsScreen extends StatelessWidget {
             mealsData[index].duration,
             mealsData[index].complexity,
             mealsData[index].affordability,
+            categoryColor,
           );
         },
       ),
