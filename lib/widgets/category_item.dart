@@ -24,12 +24,11 @@ class CategoryItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(15),
-      splashColor: Theme.of(context).primaryColor,
+      splashColor: this.color,
       onTap: () => selectCategory(context),
       child: Container(
-        padding: EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
-          color: this.color,
           gradient: LinearGradient(
             begin: Alignment.bottomRight,
             end: Alignment.topLeft,
@@ -43,14 +42,6 @@ class CategoryItem extends StatelessWidget {
             color: Colors.black,
           ),
           borderRadius: BorderRadius.circular(15),
-          boxShadow: [
-            BoxShadow(
-              offset: Offset(1.5, 1),
-              color: Colors.grey.shade400,
-              spreadRadius: 1,
-              blurRadius: 2,
-            ),
-          ],
         ),
         child: Align(
           alignment: Alignment.bottomRight,
