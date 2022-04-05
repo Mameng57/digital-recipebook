@@ -10,6 +10,17 @@ class Home extends StatelessWidget {
           color: Colors.white,
           child: const Text("Digital Recipebook"),
         ),
+        backgroundColor: Colors.transparent,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Theme.of(context).primaryColor,
+                Theme.of(context).primaryColor.withOpacity(0.5),
+              ],
+            ),
+          ),
+        ),
       ),
       body: CategoriesScreen(),
     );

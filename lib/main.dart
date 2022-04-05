@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.orange[200],
           shadowColor: Colors.transparent,
           titleTextStyle: TextStyle(
-            fontSize: 20,
+            fontSize: 22,
             fontFamily: "RobotoCondensed",
           ),
         ),
-        primaryColor: Colors.orange[200],
+        primaryColor: Colors.orange[300],
         textTheme: TextTheme(
           headline5: TextStyle(
             fontSize: 20,
