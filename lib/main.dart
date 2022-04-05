@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:digital_recipebook/home.dart';
-import 'package:digital_recipebook/category_meals_screen.dart';
+import 'package:digital_recipebook/screens/category_meals_screen.dart';
 
 void main() => runApp(MyApp());
 

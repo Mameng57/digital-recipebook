@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:digital_recipebook/models/meal.dart';
 
-class MealCard extends StatelessWidget {
+class MealItem extends StatelessWidget {
   final String _mealTitle;
   final String _mealImage;
   final int _duration;
   final Complexity _complexity;
   final Affordability _affordability;
 
-  const MealCard(
+  const MealItem(
       this._mealTitle,
       this._mealImage,
       this._duration,

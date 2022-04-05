@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:digital_recipebook/DUMMY_DATA.dart';
 import 'package:digital_recipebook/models/meal.dart';
+import 'package:digital_recipebook/widgets/meal_item.dart';
 
 class CategoryMealsScreen extends StatelessWidget {
   static const routeName = "/category-meals";
@@ -18,7 +19,9 @@ class CategoryMealsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(categoryTitle,),
+        title: Text(
+          categoryTitle,
+        ),
         flexibleSpace: Container(
           decoration: BoxDecoration(
             color: categoryColor,
@@ -34,27 +37,12 @@ class CategoryMealsScreen extends StatelessWidget {
       body: ListView.builder(
         itemCount: mealsData.length,
         itemBuilder: (context, index) {
-          return Container(
-            width: MediaQuery.of(context).size.width * 0.9,
-            height: MediaQuery.of(context).size.height * 0.15,
-            padding: EdgeInsets.all(15),
-            margin: EdgeInsets.all(2),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: Colors.black38,
-                width: 1,
-              ),
-              borderRadius: BorderRadius.circular(7),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  mealsData[index].title,
-                  style: Theme.of(context).textTheme.headline5,
-                ),
-              ],
-            ),
+          return MealItem(
+            mealsData[index].title,
+            mealsData[index].imageUrl,
+            mealsData[index].duration,
+            mealsData[index].complexity,
+            mealsData[index].affordability,
           );
         },
       ),

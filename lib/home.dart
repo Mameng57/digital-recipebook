@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:digital_recipebook/categories_screen.dart';
+import 'package:digital_recipebook/screens/categories_screen.dart';
 
 class Home extends StatelessWidget {
   @override
