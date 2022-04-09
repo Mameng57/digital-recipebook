@@ -27,8 +27,8 @@ class MealItem extends StatelessWidget {
       child: Container(
         width: MediaQuery.of(context).size.width * 0.9,
         height: MediaQuery.of(context).size.height * 0.15,
-        padding: EdgeInsets.all(15),
-        margin: EdgeInsets.all(2),
+        padding: const EdgeInsets.only(left: 10),
+        margin: const EdgeInsets.all(2),
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black38,
@@ -40,6 +40,7 @@ class MealItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
+              width: MediaQuery.of(context).size.width / 1.7,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -63,11 +64,20 @@ class MealItem extends StatelessWidget {
                 ],
               ),
             ),
-            Align(
-              alignment: Alignment.bottomRight,
-              child: Image.network(
-                _mealImage,
-                width: MediaQuery.of(context).size.width / 7.5,
+            Container(
+              width: MediaQuery.of(context).size.width / 3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(7),
+                  bottomRight: Radius.circular(7),
+                ),
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  alignment: Alignment.center,
+                  image: NetworkImage(
+                    _mealImage,
+                  ),
+                ),
               ),
             ),
           ],
