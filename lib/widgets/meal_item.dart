@@ -1,6 +1,6 @@
-import 'package:digital_recipebook/screens/meal_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:digital_recipebook/models/meal.dart';
+import 'package:digital_recipebook/screens/meal_detail_screen.dart';
 
 class MealItem extends StatelessWidget {
   final String _mealId;
