@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
             color: Colors.black45,
             fontFamily: "Raleway",
             fontWeight: FontWeight.normal,
-          )
+          ),
         ),
       ),
       initialRoute: '/',

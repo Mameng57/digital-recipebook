@@ -7,7 +7,8 @@ class MealDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final String mealId = ModalRoute.of(context)!.settings.arguments as String;
+    final String mealId =
+        ModalRoute.of(context)!.settings.arguments as String;
 
     return Scaffold(
       body: Center(

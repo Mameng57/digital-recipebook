@@ -21,9 +21,10 @@ class MealItem extends StatelessWidget {
     this._fillColor, {Key? key}
   ) : super(key: key);
 
-  void selectMeal(context) {
-    Navigator.of(context)
-        .pushNamed(MealDetailScreen.routeName, arguments: _mealId);
+  void selectMeal(BuildContext context) {
+    Navigator.of(context).pushNamed(
+      MealDetailScreen.routeName, arguments: _mealId
+    );
   }
 
   @override
