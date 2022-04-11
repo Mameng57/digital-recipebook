@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:digital_recipebook/home.dart';
 import 'package:digital_recipebook/screens/category_meals_screen.dart';
 import 'package:digital_recipebook/screens/meal_detail_screen.dart';
+import 'package:digital_recipebook/screens/unknown_fallback_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,6 +46,9 @@ class MyApp extends StatelessWidget {
         CategoryMealsScreen.routeName: (_) => CategoryMealsScreen(),
         MealDetailScreen.routeName: (_) => MealDetailScreen(),
       },
+      onUnknownRoute: (settings) => MaterialPageRoute(
+        builder: (context) => UnknownFallbackScreen(),
+      ),
     );
   }
 }
