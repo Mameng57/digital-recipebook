@@ -1,7 +1,9 @@
+import 'package:digital_recipebook/screens/meal_detail_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:digital_recipebook/models/meal.dart';
 
 class MealItem extends StatelessWidget {
+  final String _mealId;
   final String _mealTitle;
   final String _mealImage;
   final int _duration;
@@ -10,6 +12,7 @@ class MealItem extends StatelessWidget {
   final Color _fillColor;
 
   const MealItem(
+    this._mealId,
     this._mealTitle,
     this._mealImage,
     this._duration,
@@ -18,12 +21,17 @@ class MealItem extends StatelessWidget {
     this._fillColor, {Key? key}
   ) : super(key: key);
 
+  void selectMeal(context) {
+    Navigator.of(context)
+        .pushNamed(MealDetailScreen.routeName, arguments: _mealId);
+  }
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
       borderRadius: BorderRadius.circular(7),
       splashColor: this._fillColor.withOpacity(0.5),
-      onTap: () {},
+      onTap: () => selectMeal(context),
       child: Container(
         width: MediaQuery.of(context).size.width * 0.9,
         height: MediaQuery.of(context).size.height * 0.15,
