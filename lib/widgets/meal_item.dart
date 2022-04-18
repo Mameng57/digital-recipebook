@@ -60,7 +60,7 @@ class MealItem extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   Text(
-                    "Duration : ${_duration.toString()} minutes",
+                    "Duration : $_duration minutes",
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   Text(
