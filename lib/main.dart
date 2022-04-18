@@ -20,8 +20,14 @@ class MyApp extends StatelessWidget {
             fontFamily: "RobotoCondensed",
           ),
         ),
-        primaryColor: Colors.orange[300],
+        primaryColor: Colors.orange[200],
         textTheme: TextTheme(
+          headline4: TextStyle(
+            fontSize: 25,
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+            fontFamily: "Raleway",
+          ),
           headline5: TextStyle(
             fontSize: 20,
             color: Colors.black54,
@@ -37,6 +43,15 @@ class MyApp extends StatelessWidget {
             color: Colors.black45,
             fontFamily: "Raleway",
             fontWeight: FontWeight.normal,
+          ),
+          bodyText2: TextStyle(
+            color: Colors.black54,
+            fontSize: 16,
+            fontFamily: "Raleway",
+          ),
+          caption: TextStyle(
+            color: Colors.black54,
+            fontWeight: FontWeight.bold,
           ),
         ),
       ),
